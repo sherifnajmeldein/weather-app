@@ -34,8 +34,6 @@ pipeline {
 
         stage('Run Ansible Playbook') {
             steps {
-                sh 'ls -l ~/Weather-App/ansible/'
-                sh 'cat ~/Weather-App/ansible/inventory'
                 sh 'ansible-playbook -i ansible/inventory ansible/deploy.yaml'
             }
         }
