@@ -1,0 +1,29 @@
+- name: Deploy Web App to VMs
+  hosts: vms
+  become: true
+  tasks:
+  
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+
+    - name: Add user to docker group
+      user:
+        name: vagrant
+        groups: docker
+        append: yes
+
+    - name: Enable and start Docker service
+      systemd:
+        name: docker
+        enabled: yes
+        state: started
+
+    - name: Pull Docker image from Docker Hub
+      command: docker pull negm8/weather-app:v1
+
+    - name: Run Docker container
+      command: docker run -d -p 5000:5000 --name weather-app negm8/weather-app:v1
+
