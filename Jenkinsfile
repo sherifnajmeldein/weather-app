@@ -34,6 +34,7 @@ pipeline {
 
         stage('Run Ansible Playbook') {
             steps {
+                sh 'ANSIBLE_HOST_KEY_CHECKING=False'
                 sh 'ansible-playbook -i ansible/inventory ansible/deploy.yaml'
             }
         }
