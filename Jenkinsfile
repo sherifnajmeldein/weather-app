@@ -17,15 +17,15 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t $DOCKER_IMAGE_NAME .'
+                    sh "docker build -t ${env.DOCKER_IMAGE_NAME} ."
                 }
             }
         }
 
         stage('Push to Docker Hub') {
             steps {
-                withDockerRegistry([credentialsId: env.DOCKER_CREDENTIALS_ID, url: '']) {
-                    sh 'docker push $DOCKER_IMAGE_NAME'
+                withDockerRegistry([credentialsId: env.DOCKER_CREDENTIALS_ID, url: 'https://index.docker.io/v1/']) {
+                    sh "docker push ${env.DOCKER_IMAGE_NAME}"
                 }
             }
         }
@@ -37,3 +37,4 @@ pipeline {
         }
     }
 }
+
