@@ -5,8 +5,6 @@ pipeline {
         GIT_CREDENTIALS_ID = 'd35ce7f2-b716-4016-bdd6-21c03564c4d9'
         DOCKER_CREDENTIALS_ID = '3ca2a147-6062-46cf-bf75-2755bf37684a'
         DOCKER_IMAGE_NAME = 'negm8/weather-app'
-        SSH_CREDENTIALS_ID_VM1 = 'ansible_ssh_vm1'
-        SSH_CREDENTIALS_ID_VM2 = 'ansible_ssh_vm2' 
     }
 
     stages {
@@ -34,7 +32,6 @@ pipeline {
 
         stage('Run Ansible Playbook') {
             steps {
-                sh 'ANSIBLE_HOST_KEY_CHECKING=False'
                 sh 'ansible-playbook -i ansible/inventory ansible/deploy.yaml'
             }
         }
