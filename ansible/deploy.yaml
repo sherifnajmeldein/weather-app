@@ -24,6 +24,10 @@
     - name: Pull Docker image from Docker Hub
       command: docker pull negm8/weather-app:v1
 
+    - name: Remove existing container if running
+      ignore_errors: yes
+      command: docker rm -f weather-app
+
     - name: Run Docker container
       command: docker run -d -p 5000:5000 --name weather-app negm8/weather-app:v1
 
