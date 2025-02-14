@@ -33,8 +33,8 @@ pipeline {
         stage('Fix Private Key Permissions') {
             steps {
                 script {
-                    sh "chmod 600 ./home/negm/Weather-App/ansible/private_key_vm1"
-                    sh "chmod 600 ./home/negm/Weather-App/ansible/private_key_vm2"
+                    sh "chmod 600 ./ansible/private_key_vm1"
+                    sh "chmod 600 ./ansible/private_key_vm2"
                 }
             }
         }
