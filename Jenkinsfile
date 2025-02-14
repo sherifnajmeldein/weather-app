@@ -29,7 +29,15 @@ pipeline {
                 }
             }
         }
-
+      
+        stage('Fix Private Key Permissions') {
+            steps {
+                script {
+                    sh "chmod 600 ./home/negm/Weather-App/ansible/private_key_vm1"
+                    sh "chmod 600 ./home/negm/Weather-App/ansible/private_key_vm2"
+                }
+            }
+        }
         stage('Run Ansible Playbook') {
             steps {
                 sh 'ansible-playbook -i ansible/inventory ansible/deploy.yaml'
