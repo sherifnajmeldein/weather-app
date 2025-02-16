@@ -34,46 +34,48 @@ This project automates the deployment of a simple **Weather App** using **Jenkin
    ```sh
    git clone https://github.com/sherifnajmeldein/weather-app.git
    cd weather-app
-🔧 Setup & Deployment
-1️⃣ Configure Vagrant Machines
-Run the following to provision the VMs:
 
-sh
-Copy
-vagrant up
-2️⃣ Jenkins Pipeline Setup
-In Jenkins, create a new pipeline job.
+---
+## 🔧 Setup & Deployment
+1. **Configure Vagrant Machines**
+- Run the following to provision the VMs:
+```cpp
+ vagrant up
+```
+2. **Jenkins Pipeline Setup**
+- In Jenkins, create a new pipeline job.
+- Use GitHub as the SCM and link the repository.
+- Add the Jenkinsfile to execute the pipeline.
+3. **Run the Ansible Playbook**
+```cpp
+-ansible-playbook -i ansible/inventory ansible/deploy.yaml
+```
+4. **Access the Web App**
+- Find the IPs of the two VMs and access them in your browser:
+```cpp
+- HTTP://<vm1-ip>:5000
+- http://<vm2-ip>:5000
+```
+---
 
-Use GitHub as the SCM and link the repository.
+📸 **Website Running on Two VMs**
+- *Figure 1: Weather App running on VM 1.*
+![VM 1](screenshots/2.png)  
+- *Figure 2: Weather App running on VM 2.*
+![VM 2](screenshots/3.png)  
 
-Add the Jenkinsfile to execute the pipeline.
-
-3️⃣ Run the Ansible Playbook
-sh
-Copy
-ansible-playbook -i ansible/inventory ansible/deploy.yaml
-4️⃣ Access the Web App
-Find the IPs of the two VMs and access them in your browser:
-
-cpp
-Copy
-http://<vm1-ip>:5000  
-http://<vm2-ip>:5000  
-📸 Website Running on Two VMs
-![VM 1](screenshots/2.png) *Figure 1: Weather App running on VM 1.* 
-![VM 2](screenshots/3.png)  *Figure 2: Weather App running on VM 2.*
-
-
-✉️ Email Notifications (Optional)
-The pipeline is configured to send an email on failure.
+---
+## ✉️ Email Notifications (Optional)
+ The pipeline is configured to send an email on success or failure.
 
 📸 Email Notification Example
-Email Notification
 ![Email Notification](screenshots/4.png)  
-*Figure 3: Example of an email notification sent on pipeline failure.*  
+*Figure 3: Example of an email notification sent on pipeline success.*  
+
 🤝 Contributing
+---
 Feel free to fork this repository and submit Pull Requests!
 
-📌 Maintainer
+## 📌 Maintainer
 👤 Sherif Negm
 🔗 [LinkedIn](https://www.linkedin.com/in/sherif-negm-300b451ba/) | ✉️ negmsherif8@gmail.com
