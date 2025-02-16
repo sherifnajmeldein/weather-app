@@ -60,18 +60,21 @@ Copy
 http://<vm1-ip>:5000  
 http://<vm2-ip>:5000  
 📸 Website Running on Two VMs
-VM 1 !(screenshots/2.png) 
-VM 2 !(screenshots/3.png) 
+![VM 1](screenshots/2.png)  
+*Figure 1: Weather App running on VM 1.* 
+![VM 1](screenshots/3.png)  
+*Figure 1: Weather App running on VM 1.* 
 
 ✉️ Email Notifications (Optional)
 The pipeline is configured to send an email on failure.
 
 📸 Email Notification Example
 Email Notification
-!(screenshots/4.png) 
+![Email Notification](screenshots/4.png)  
+*Figure 3: Example of an email notification sent on pipeline failure.*  
 🤝 Contributing
 Feel free to fork this repository and submit Pull Requests!
 
 📌 Maintainer
-👤 Sherif Negm el-din Mahmoud
+👤 Sherif Negm
 🔗 LinkedIn | ✉️ negmsherif8@gmail.com
