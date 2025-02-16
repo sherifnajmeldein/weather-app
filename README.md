@@ -23,7 +23,7 @@ This project automates the deployment of a simple **Weather App** using **Jenkin
 4. **Deploy Stage** – Ansible provisions the VMs and runs the container  
 
 📸 **Pipeline Success Screenshot**  
-![Pipeline Success](screenshoots/1.png)  
+![Pipeline Success](screenshots/1.png)  
 
 ---
 
@@ -60,16 +60,16 @@ Edit
 http://<vm1-ip>:5000  
 http://<vm2-ip>:5000  
 📸 Website Running on Two VMs
-screenshoots/2.png
-screenshoots/3.png
+screenshots/2.png
+screenshots/3.png
 ✉️ Email Notifications (Optional)
 The pipeline is configured to send an email on failure.
 
 📸 Email Notification Example
-screenshoots/4.png
+screenshots/4.png
 🤝 Contributing
 Feel free to fork this repository and submit Pull Requests!
 
 📌 Maintainer
 👤 Sherif Negm el-din Mahmoud
-🔗 LinkedIn | ✉️ negms5270@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/sherif-negm-300b451ba/) | ✉️ negmsherif8@gmail.com
