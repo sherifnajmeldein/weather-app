@@ -60,10 +60,9 @@ Copy
 http://<vm1-ip>:5000  
 http://<vm2-ip>:5000  
 📸 Website Running on Two VMs
-![VM 1](screenshots/2.png)  
-*Figure 1: Weather App running on VM 1.* 
-![VM 1](screenshots/3.png)  
-*Figure 1: Weather App running on VM 1.* 
+![VM 1](screenshots/2.png) *Figure 1: Weather App running on VM 1.* 
+![VM 2](screenshots/3.png)  *Figure 2: Weather App running on VM 2.*
+
 
 ✉️ Email Notifications (Optional)
 The pipeline is configured to send an email on failure.
