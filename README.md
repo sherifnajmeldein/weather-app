@@ -77,4 +77,4 @@ Feel free to fork this repository and submit Pull Requests!
 
 📌 Maintainer
 👤 Sherif Negm
-🔗 LinkedIn | ✉️ negmsherif8@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/sherif-negm-300b451ba/) | ✉️ negmsherif8@gmail.com
