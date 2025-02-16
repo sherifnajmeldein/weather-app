@@ -60,13 +60,13 @@ Edit
 http://<vm1-ip>:5000  
 http://<vm2-ip>:5000  
 📸 Website Running on Two VMs
-screenshots/2.png
-screenshots/3.png
+(screenshots/2.png)
+(screenshots/3.png)
 ✉️ Email Notifications (Optional)
 The pipeline is configured to send an email on failure.
 
 📸 Email Notification Example
-screenshots/4.png
+(screenshots/4.png)
 🤝 Contributing
 Feel free to fork this repository and submit Pull Requests!
 
