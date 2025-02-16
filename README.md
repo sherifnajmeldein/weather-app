@@ -60,15 +60,15 @@ Copy
 http://<vm1-ip>:5000  
 http://<vm2-ip>:5000  
 📸 Website Running on Two VMs
-VM 1 (screenshots/2.png) 
-VM 2 (screenshots/3.png) 
+VM 1 !(screenshots/2.png) 
+VM 2 !(screenshots/3.png) 
 
 ✉️ Email Notifications (Optional)
 The pipeline is configured to send an email on failure.
 
 📸 Email Notification Example
 Email Notification
-(screenshots/4.png) 
+!(screenshots/4.png) 
 🤝 Contributing
 Feel free to fork this repository and submit Pull Requests!
 
