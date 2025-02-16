@@ -43,6 +43,21 @@ pipeline {
                 sh 'ansible-playbook -i ansible/inventory ansible/deploy.yaml'
             }
         }
+        post {
+          success {
+             emailext subject: "Jenkins Pipeline Success: Weather-App",
+                  body: "The pipeline ran successfully! 🎉",
+                  recipientProviders: [[$class: 'DevelopersRecipientProvider']],
+                  to: 'negmsherif8@gmail.com'
+        }
+        failure {
+          emailext subject: "Jenkins Pipeline Failed: Weather-App ❌",
+                  body: "The pipeline failed. Check the logs for details.",
+                  recipientProviders: [[$class: 'DevelopersRecipientProvider']],
+                  to: 'negmsherif8@gmail.com'
+    }
+}
+
     }
 }
 
